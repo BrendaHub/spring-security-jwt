@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.14.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'io.loiter'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+	mavenCentral()
+}
+
+dependencies {
+	compile 'io.jsonwebtoken:jjwt:0.9.1'
+	compile 'javax.xml.bind:jaxb-api:2.3.1'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+//	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+//	providedCompile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+
+}
